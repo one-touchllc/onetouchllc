@@ -104,8 +104,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .search-container:focus-within { border-color: rgba(255, 255, 255, 0.3); }
-
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
     </style>
@@ -124,7 +122,7 @@
             </div>
             <div class="max-w-xl" data-aos="fade-up" data-aos-delay="300">
                 <p class="text-white/50 text-base md:text-lg font-light leading-relaxed">
-                    Access a sovereign collection of digital artifacts. A fluid interface designed for deep exploration and interaction.
+                    Access a sovereign collection of digital artifacts. Click any module to explore its dedicated interface.
                 </p>
             </div>
         </header>
@@ -156,20 +154,20 @@
     </footer>
 
     <script>
-        // GitHub ke liye updated links (Relative paths)
+        // Updated JS with internal links to your apps folder
         const apps = [
-            { name: 'Horror Escape', description: 'Advanced psychological simulation module.', url: '/apps/horror-escape', tags: ['Experience'] },
-            { name: 'Chess King', description: 'Deep-learning neural engine for strategic training.', url: '/apps/chess-king', tags: ['AI', 'Game'] },
-            { name: 'Ice Hockey', description: 'Kinetic physics simulation in sub-zero environments.', url: '/apps/ice-hockey', tags: ['Sports'] },
-            { name: 'Circle.io', description: 'Biological expansion in a high-concurrency grid.', url: '/apps/circle-io', tags: ['MMO'] },
-            { name: 'One Clock', description: 'Atomic precision temporal monitoring.', url: '/apps/one-clock', tags: ['Utility'] },
-            { name: 'One Weather', description: 'Satellite-grade climate telemetry.', url: '/apps/one-weather', tags: ['Data'] },
-            { name: 'One Browser', description: 'Noise-canceled browsing environment.', url: '/apps/one-browser', tags: ['Utility'] },
-            { name: 'Hicktal AI', description: 'Semantic content synthesis interface.', url: '/apps/hicktal-ai', tags: ['AI'] },
-            { name: 'Aether AI', description: 'Persistent context conversational logic.', url: '/apps/aether-ai', tags: ['AI'] },
-            { name: 'One Sheets', description: 'Distributed ledger data processing.', url: '/apps/one-sheets', tags: ['Business'] },
-            { name: 'App Sphere', description: 'Core software distribution node.', url: '/apps/app-sphere', tags: ['Hub'] },
-            { name: 'Spark', description: 'Flash-sync social interaction engine.', url: '/apps/spark', tags: ['Social'] }
+            { name: 'Horror Escape', description: 'Advanced psychological simulation module.', url: '/apps/horror-escape.html', tags: ['Experience'] },
+            { name: 'Chess King', description: 'Deep-learning neural engine for strategic training.', url: '/apps/chess-king.html', tags: ['AI', 'Game'] },
+            { name: 'Ice Hockey', description: 'Kinetic physics simulation in sub-zero environments.', url: '/apps/ice-hockey.html', tags: ['Sports'] },
+            { name: 'Circle.io', description: 'Biological expansion in a high-concurrency grid.', url: '/apps/circle-io.html', tags: ['MMO'] },
+            { name: 'One Clock', description: 'Atomic precision temporal monitoring.', url: '/apps/one-clock.html', tags: ['Utility'] },
+            { name: 'One Weather', description: 'Satellite-grade climate telemetry.', url: '/apps/one-weather.html', tags: ['Data'] },
+            { name: 'One Browser', description: 'Noise-canceled browsing environment.', url: '/apps/one-browser.html', tags: ['Utility'] },
+            { name: 'Hicktal AI', description: 'Semantic content synthesis interface.', url: '/apps/hicktal-ai.html', tags: ['AI'] },
+            { name: 'Aether AI', description: 'Persistent context conversational logic.', url: '/apps/aether-ai.html', tags: ['AI'] },
+            { name: 'One Sheets', description: 'Distributed ledger data processing.', url: '/apps/one-sheets.html', tags: ['Business'] },
+            { name: 'App Sphere', description: 'Core software distribution node.', url: '/apps/app-sphere.html', tags: ['Hub'] },
+            { name: 'Spark', description: 'Flash-sync social interaction engine.', url: '/apps/spark.html', tags: ['Social'] }
         ];
 
         let activeTag = 'All';
@@ -238,8 +236,10 @@
                 const tagMatch = activeTag === 'All' || app.tags.includes(activeTag);
                 return searchMatch && tagMatch;
             });
+
             const container = document.getElementById('apps-container');
             container.innerHTML = '';
+            
             if (filtered.length === 0) {
                 document.getElementById('no-results').classList.remove('hidden');
             } else {
@@ -253,6 +253,7 @@
             const tags = new Set(['All']);
             apps.forEach(app => app.tags.forEach(tag => tags.add(tag)));
             const container = document.getElementById('tag-filters');
+            
             tags.forEach(tag => {
                 const btn = document.createElement('button');
                 btn.className = `magnetic-btn ${tag === 'All' ? 'active' : ''}`;
