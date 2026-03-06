@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="jN3NDua2SHvMiCCEaL7c3xtkZJLZKbYedJ06nQqDris" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Touch LLC | Elite Digital Hub</title>
@@ -20,9 +19,7 @@
             --cursor-size: 16px;
         }
 
-        * {
-            cursor: none !important;
-        }
+        * { cursor: none !important; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -55,11 +52,7 @@
             transform: translate(-50%, -50%);
         }
 
-        .cursor-follower.hovering {
-            width: 60px;
-            height: 60px;
-            background: white;
-        }
+        .cursor-follower.hovering { width: 60px; height: 60px; background: white; }
 
         .glass-card {
             background: var(--glass);
@@ -82,26 +75,16 @@
         }
 
         .action-btn {
-            width: 54px;
-            height: 54px;
+            width: 54px; height: 54px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-            position: relative;
-            overflow: hidden;
             flex-shrink: 0;
         }
 
-        .action-btn:hover {
-            background: white;
-            color: black;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
+        .action-btn:hover { background: white; color: black; transform: scale(1.1); }
 
         .magnetic-btn {
             border-radius: 12px;
@@ -109,24 +92,11 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--glass-border);
             transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; color: rgba(255, 255, 255, 0.5);
         }
 
-        .magnetic-btn:hover {
-            color: white;
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .magnetic-btn.active {
-            background: white;
-            color: black;
-            border-color: white;
-        }
+        .magnetic-btn.active { background: white; color: black; border-color: white; }
 
         .reveal-text {
             background: linear-gradient(180deg, #fff 40%, rgba(255,255,255,0.1) 100%);
@@ -134,18 +104,9 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .search-container {
-            box-shadow: 0 0 0 0 rgba(0, 242, 255, 0);
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-
-        .search-container:focus-within {
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4);
-        }
+        .search-container:focus-within { border-color: rgba(255, 255, 255, 0.3); }
 
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
     </style>
 </head>
@@ -195,19 +156,20 @@
     </footer>
 
     <script>
+        // GitHub ke liye updated links (Relative paths)
         const apps = [
-            { name: 'Horror Escape', description: 'Advanced psychological simulation module.', url: 'https://thehorrorescape.oneapp.dev', tags: ['Experience'] },
-            { name: 'Chess King', description: 'Deep-learning neural engine for strategic training.', url: 'https://chessking.tiiny.site', tags: ['AI', 'Game'] },
-            { name: 'Ice Hockey', description: 'Kinetic physics simulation in sub-zero environments.', url: 'https://icehockey.tiiny.site', tags: ['Sports'] },
-            { name: 'Circle.io', description: 'Biological expansion in a high-concurrency grid.', url: 'https://circle-io.tiiny.site', tags: ['MMO'] },
-            { name: 'One Clock', description: 'Atomic precision temporal monitoring.', url: 'https://oneclock.tiiny.site', tags: ['Utility'] },
-            { name: 'One Weather', description: 'Satellite-grade climate telemetry.', url: 'https://oneweather.created.app', tags: ['Data'] },
-            { name: 'One Browser', description: 'Noise-canceled browsing environment.', url: 'https://one-browser.base44.app', tags: ['Utility'] },
-            { name: 'Hicktal AI', description: 'Semantic content synthesis interface.', url: 'https://builder.corover.ai/params/?appid=4f156b43-0258-4d15-993f-be48d8584073', tags: ['AI'] },
-            { name: 'Aether AI', description: 'Persistent context conversational logic.', url: 'https://ather-ai.base44.app', tags: ['AI'] },
-            { name: 'One Sheets', description: 'Distributed ledger data processing.', url: 'https://one-sheets.base44.app', tags: ['Business'] },
-            { name: 'App Sphere', description: 'Core software distribution node.', url: 'https://app-sphere.base44.app', tags: ['Hub'] },
-            { name: 'Spark', description: 'Flash-sync social interaction engine.', url: 'https://sparkk.base44.app', tags: ['Social'] }
+            { name: 'Horror Escape', description: 'Advanced psychological simulation module.', url: '/apps/horror-escape', tags: ['Experience'] },
+            { name: 'Chess King', description: 'Deep-learning neural engine for strategic training.', url: '/apps/chess-king', tags: ['AI', 'Game'] },
+            { name: 'Ice Hockey', description: 'Kinetic physics simulation in sub-zero environments.', url: '/apps/ice-hockey', tags: ['Sports'] },
+            { name: 'Circle.io', description: 'Biological expansion in a high-concurrency grid.', url: '/apps/circle-io', tags: ['MMO'] },
+            { name: 'One Clock', description: 'Atomic precision temporal monitoring.', url: '/apps/one-clock', tags: ['Utility'] },
+            { name: 'One Weather', description: 'Satellite-grade climate telemetry.', url: '/apps/one-weather', tags: ['Data'] },
+            { name: 'One Browser', description: 'Noise-canceled browsing environment.', url: '/apps/one-browser', tags: ['Utility'] },
+            { name: 'Hicktal AI', description: 'Semantic content synthesis interface.', url: '/apps/hicktal-ai', tags: ['AI'] },
+            { name: 'Aether AI', description: 'Persistent context conversational logic.', url: '/apps/aether-ai', tags: ['AI'] },
+            { name: 'One Sheets', description: 'Distributed ledger data processing.', url: '/apps/one-sheets', tags: ['Business'] },
+            { name: 'App Sphere', description: 'Core software distribution node.', url: '/apps/app-sphere', tags: ['Hub'] },
+            { name: 'Spark', description: 'Flash-sync social interaction engine.', url: '/apps/spark', tags: ['Social'] }
         ];
 
         let activeTag = 'All';
@@ -260,7 +222,7 @@
                         <p class="text-white/40 text-sm font-light leading-snug max-w-md line-clamp-1">${app.description}</p>
                     </div>
                 </div>
-                <a href="${app.url}" target="_blank" class="action-btn">
+                <a href="${app.url}" class="action-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                     </svg>
@@ -276,10 +238,8 @@
                 const tagMatch = activeTag === 'All' || app.tags.includes(activeTag);
                 return searchMatch && tagMatch;
             });
-
             const container = document.getElementById('apps-container');
             container.innerHTML = '';
-            
             if (filtered.length === 0) {
                 document.getElementById('no-results').classList.remove('hidden');
             } else {
@@ -293,7 +253,6 @@
             const tags = new Set(['All']);
             apps.forEach(app => app.tags.forEach(tag => tags.add(tag)));
             const container = document.getElementById('tag-filters');
-            
             tags.forEach(tag => {
                 const btn = document.createElement('button');
                 btn.className = `magnetic-btn ${tag === 'All' ? 'active' : ''}`;
